@@ -57,14 +57,13 @@
         .timeline-details {
             max-height: 0;
             overflow: hidden;
-            transition: max-height 0.3s ease-out;
+            transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
         }
         .timeline-details.open {
-            max-height: 500px; /* Adjust as needed, must be large enough to contain content */
-            transition: max-height 0.5s ease-in;
+            max-height: 1000px; /* Adjust to a large enough value to prevent content cutoff */
         }
         .arrow-icon {
-            transition: transform 0.3s ease-out;
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
         .arrow-icon.rotated {
             transform: rotate(90deg);
@@ -94,6 +93,7 @@
                 <a href="#experience" class="text-slate-600 hover:text-teal-600 transition duration-300">Experience</a>
                 <a href="#skills" class="text-slate-600 hover:text-teal-600 transition duration-300">Skills</a>
                 <a href="#education" class="text-slate-600 hover:text-teal-600 transition duration-300">Education</a>
+                <a href="#contact" class="text-slate-600 hover:text-teal-600 transition duration-300">Contact</a>
             </div>
             <div class="md:hidden">
                 <button id="menu-btn" class="text-slate-600 focus:outline-none">
@@ -108,6 +108,7 @@
             <a href="#experience" class="block py-2 px-4 text-sm text-slate-600 hover:bg-teal-50">Experience</a>
             <a href="#skills" class="block py-2 px-4 text-sm text-slate-600 hover:bg-teal-50">Skills</a>
             <a href="#education" class="block py-2 px-4 text-sm text-slate-600 hover:bg-teal-50">Education</a>
+            <a href="#contact" class="block py-2 px-4 text-sm text-slate-600 hover:bg-teal-50">Contact</a>
         </div>
     </header>
 
@@ -214,13 +215,33 @@
     </main>
     
     <footer id="contact" class="bg-slate-800 text-white py-12">
-        <div class="container mx-auto px-6 text-center">
-             <h2 class="text-2xl font-bold mb-4">Get In Touch</h2>
-             <p class="mb-2">Copenhagen, Denmark</p>
-             <p class="mb-4"><a href="mailto:ramakadre@gmail.com" class="hover:text-teal-400 transition duration-300">ramakadre@gmail.com</a></p>
-             <a href="https://www.linkedin.com/in/rama-kadri-116901189" target="_blank" rel="noopener noreferrer" class="text-teal-400 hover:text-white transition duration-300">
-                LinkedIn Profile
-             </a>
+        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-8 items-center">
+             <div>
+                <h2 class="text-2xl font-bold mb-4">Get In Touch</h2>
+                
+             </div>
+             <div>
+                <div class="mb-4">
+                    <p class="font-bold">Email</p>
+                    <p><a href="mailto:ramakadre@gmail.com" class="hover:text-teal-400 transition duration-300">ramakadre@gmail.com</a></p>
+                </div>
+                <div class="mb-4">
+                    <p class="font-bold">Phone</p>
+                    <p>91770066 (Mobile)</p>
+                </div>
+                <div class="mb-4">
+                    <p class="font-bold">Address</p>
+                    <p>Copenhagen</p>
+                </div>
+                <div class="mb-4">
+                    <p class="font-bold">LinkedIn</p>
+                    <p><a href="https://www.linkedin.com/in/rama-kadri-116901189" target="_blank" rel="noopener noreferrer" class="hover:text-teal-400 transition duration-300">linkedin.com/in/rama-kadri-116901189</a></p>
+                </div>
+                <div>
+                    <p class="font-bold">Website</p>
+                    <p><a href="https://rama-kadri.github.io/cv/" target="_blank" rel="noopener noreferrer" class="hover:text-teal-400 transition duration-300">rama-kadri.github.io/cv/</a></p>
+                </div>
+             </div>
         </div>
     </footer>
 
